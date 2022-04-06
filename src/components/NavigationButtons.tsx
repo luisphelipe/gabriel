@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavigationButtons = () => {
+const NavigationButtons = (props: any) => {
   return (
     <div
       style={{
@@ -17,6 +17,7 @@ const NavigationButtons = () => {
           height: "100%",
           fontSize: 22,
         }}
+        {...props}
       >
         fazer login
       </button>

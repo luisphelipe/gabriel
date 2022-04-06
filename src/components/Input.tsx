@@ -4,9 +4,11 @@ interface Props {
   name: string;
   label: string;
   placeholder: string;
+  type?: string;
+  required?: boolean;
 }
 
-const Input: FC<Props> = ({ name, label, placeholder }) => {
+const Input: FC<Props> = ({ name, label, placeholder, ...props }) => {
   return (
     <div
       style={{
@@ -27,7 +29,9 @@ const Input: FC<Props> = ({ name, label, placeholder }) => {
           borderBottom: "1px solid black",
           paddingBottom: 8,
           fontWeight: 16,
+          outline: "none",
         }}
+        {...props}
       />
     </div>
   );
