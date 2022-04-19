@@ -1,9 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import { Header, NavigationButtons, Layout, Input } from "../../components";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("faz login utilizando a api...");
+    navigate("/todo");
   };
 
   return (

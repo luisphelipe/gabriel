@@ -1,4 +1,5 @@
-import { Login } from "./screens";
+import { Login, Todo } from "./screens";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +11,12 @@ function App() {
         flexDirection: "column",
       }}
     >
-      <Login />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/todo" element={<Todo />} />
+        </Routes>
+      </BrowserRouter>
     </main>
   );
 }
